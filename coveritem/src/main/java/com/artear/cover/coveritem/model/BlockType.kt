@@ -2,7 +2,6 @@ package com.artear.cover.coveritem.model
 
 import com.google.gson.annotations.SerializedName
 
-//TODO: Ver forma dinamica de tipos
 enum class BlockType(val description: String) {
     @SerializedName("article")
     ARTICLE("article"),
