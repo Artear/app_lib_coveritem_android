@@ -20,13 +20,13 @@ plugins{
 
 ext {
     bintrayRepo = 'Android'
-    bintrayName = 'CoverItem'
+    bintrayName = 'coveritem'
 
     publishedGroupId = 'com.artear.cover'
-    libraryName = 'CoverItem'
+    libraryName = 'coveritem'
     artifact = 'coveritem'
 
-    libraryDescription = 'Cover Item library'
+    libraryDescription = 'coveritem library'
 
     siteUrl = 'https://github.com/Artear/app_lib_coveritem_android'
     gitUrl = 'https://github.com/Artear/app_lib_coveritem_android.git'
@@ -85,15 +85,15 @@ dependencies {
     //Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    //Gson
+    implementation "com.google.code.gson:gson:2.8.5"
+
     //Artear
-
     implementation "com.artear.tools:tools:0.0.18"
-    implementation "com.artear.networking:networking:0.0.3"
-    implementation "com.artear.domain:domain:0.0.5"
-
 
     //Support
     implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
 }
