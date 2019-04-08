@@ -23,7 +23,7 @@ ext {
     bintrayName = 'coveritem'
 
     publishedGroupId = 'com.artear.cover'
-    libraryName = 'coveritem'
+    libraryName = 'Cover Item'
     artifact = 'coveritem'
 
     libraryDescription = 'coveritem library'
