@@ -20,7 +20,7 @@ plugins{
 
 ext {
     bintrayRepo = 'Android'
-    bintrayName = 'coveritem'
+    bintrayName = 'Cover-Item'
 
     publishedGroupId = 'com.artear.cover'
     libraryName = 'Cover-Item'
