@@ -127,17 +127,17 @@ workflows:
             - download_dependencies
       - check_dependencies:
           requires:
-          - download_dependencies
+            - download_dependencies
       - tests:
           requires:
             - download_dependencies
       - stable:
           requires:
-           - release
-           - tests
+            - release
+            - tests
       - bintray:
           filters:
             branches:
               only: master
           requires:
-          - stable
+            - stable

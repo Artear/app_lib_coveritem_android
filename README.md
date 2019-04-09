@@ -1,7 +1,24 @@
-# app_lib_coveritem_android
-app_lib_coveritem_android Lib
-
+# Cover Item Base
 Cover Item Library
+
+- Cover Item Base structure for CoverViews Library
+
+
+Download
+--------
+via Maven:
+```xml
+<dependency>
+  <groupId>com.artear.cover</groupId>
+  <artifactId>coveritem</artifactId>
+  <version>0.0.1</version>
+</dependency>
+```
+or Gradle:
+```groovy
+implementation 'com.artear.cover:coveritem:0.0.1'
+```
+UI view Lib requires at minimum Java 7 or Android 4.1.
 
 License
 =======
