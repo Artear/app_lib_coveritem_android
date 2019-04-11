@@ -3,11 +3,11 @@ package com.artear.cover.coveritem.presentation.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.artear.cover.coveritem.R
 
 import com.artear.cover.coveritem.presentation.model.ArtearItem
 import com.artear.cover.coveritem.presentation.model.ArtearObject
 import com.artear.cover.coveritem.presentation.model.ArtearSection
-import com.example.coveritem.R
 
 
 class DefaultItemAdapter : ItemAdapter<ArtearObject<*>> {
