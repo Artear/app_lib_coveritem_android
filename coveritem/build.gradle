@@ -10,7 +10,7 @@ buildscript {
     }
 }
 
-plugins{
+plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
@@ -84,7 +84,7 @@ dependencies {
 
 
     //Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
 
     //Gson
     implementation "com.google.code.gson:gson:$gsonVersion"

@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.artear.cover.coveritem.presentation.model.ArtearItem
 
 
-abstract class ContentAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+abstract class ContentAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     protected val itemAdapterManager: ItemAdapterManager = ItemAdapterManager()
     val list: MutableList<ArtearItem> = ArrayList()

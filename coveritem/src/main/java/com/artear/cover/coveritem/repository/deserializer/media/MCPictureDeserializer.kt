@@ -10,9 +10,9 @@ import java.lang.reflect.Type
 class MCPictureDeserializer : JsonDeserializer<MediaContentPicture> {
 
     override fun deserialize(
-            json: JsonElement,
-            typeOfT: Type,
-            context: JsonDeserializationContext
+        json: JsonElement,
+        typeOfT: Type,
+        context: JsonDeserializationContext
     ): MediaContentPicture {
 
         val url = json.asJsonObject.get("url").asString

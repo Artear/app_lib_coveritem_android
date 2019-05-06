@@ -64,7 +64,7 @@ jobs:
     <<: *defaults
     steps:
       - restore_cache:
-         key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+          key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "coveritem/build.gradle" }}
       - run:
@@ -85,16 +85,16 @@ jobs:
   check_dependencies:
     <<: *defaults
     steps:
-    - restore_cache:
-        key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
-    - restore_cache:
-        key: jars-{{ checksum "build.gradle" }}-{{ checksum  "coveritem/build.gradle" }}
-    - run:
-        name: Dependencies Check
-        command: ./gradlew dependencyUpdates -Drevision=release
-    - store_artifacts:
-        path: coveritem/build/dependencyUpdates/report.txt
-        destination: dependencies/checks.txt
+      - restore_cache:
+          key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+      - restore_cache:
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "coveritem/build.gradle" }}
+      - run:
+          name: Dependencies Check
+          command: ./gradlew dependencyUpdates -Drevision=release
+      - store_artifacts:
+          path: coveritem/build/dependencyUpdates/report.txt
+          destination: dependencies/checks.txt
 
   bintray:
     <<: *defaults

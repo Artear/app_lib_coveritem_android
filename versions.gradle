@@ -2,11 +2,12 @@ buildscript {
     ext {
 
         // -------- Library Version ---------
-        libraryVersion = '0.0.3'
+        libraryVersion = '0.0.4'
 
 
         // ------------ Kotlin --------------
-        kotlin_version = '1.3.21'
+        kotlin_version = '1.3.31'
+        kotlinVersion = kotlin_version
 
 
         // ------------ Gradle --------------
@@ -48,6 +49,6 @@ buildscript {
         constraintLayoutVersion = '1.1.3'
 
         // ------------ Artear --------------
-        toolsVersion = '0.0.18'
+        toolsVersion = '0.0.19'
     }
 }
