@@ -5,5 +5,5 @@ import com.google.gson.GsonBuilder
 
 interface GsonMaker {
 
-    fun makeGsonBuilder() : GsonBuilder
+    fun makeGsonBuilder(): GsonBuilder
 }

@@ -11,9 +11,9 @@ import java.lang.reflect.Type
 class MCYoutubeDeserializer : JsonDeserializer<MediaContentYoutube> {
 
     override fun deserialize(
-            json: JsonElement,
-            typeOfT: Type,
-            context: JsonDeserializationContext
+        json: JsonElement,
+        typeOfT: Type,
+        context: JsonDeserializationContext
     ): MediaContentYoutube {
 
         val id = json.asJsonObject.get("id").asString

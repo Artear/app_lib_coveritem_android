@@ -9,6 +9,6 @@ class SizeGsonMakerDecorator(gsonMaker: GsonMaker) : GsonMakerDecorator(gsonMake
 
     override fun makeGsonBuilder(): GsonBuilder {
         return gsonMaker.makeGsonBuilder()
-                .registerTypeAdapter(Size::class.java, SizeDeserializer())
+            .registerTypeAdapter(Size::class.java, SizeDeserializer())
     }
 }

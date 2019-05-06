@@ -30,9 +30,9 @@ class DeserializerUtil {
  * In case exception occurs, catch exception and return null.
  */
 fun <T> JsonElement.getSafeModelObject(
-        keyName: String,
-        context: JsonDeserializationContext,
-        javaClass: Class<T>
+    keyName: String,
+    context: JsonDeserializationContext,
+    javaClass: Class<T>
 ): T? {
     return try {
         getModelObject(keyName, context, javaClass)
@@ -44,9 +44,9 @@ fun <T> JsonElement.getSafeModelObject(
 
 
 fun <T> JsonElement.getModelObject(
-        keyName: String,
-        context: JsonDeserializationContext,
-        javaClass: Class<T>
+    keyName: String,
+    context: JsonDeserializationContext,
+    javaClass: Class<T>
 ): T {
     return context.deserialize<T>(asJsonObject.get(keyName), javaClass)
 }
@@ -56,11 +56,11 @@ fun JsonElement.getJsonArray(arrayName: String): JsonArray {
 }
 
 fun <T : Any> JsonElement.getModelList(
-        keyName: String,
-        context: JsonDeserializationContext,
-        itemClass: KClass<T>,
-        tolerance: Boolean = true,
-        minCount: Int = 1
+    keyName: String,
+    context: JsonDeserializationContext,
+    itemClass: KClass<T>,
+    tolerance: Boolean = true,
+    minCount: Int = 1
 ): ArrayList<T> {
 
     val items = ArrayList<T>()

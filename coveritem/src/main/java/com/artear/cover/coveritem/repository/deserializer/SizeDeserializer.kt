@@ -8,8 +8,10 @@ import java.lang.reflect.Type
 
 class SizeDeserializer : JsonDeserializer<Size> {
 
-    override fun deserialize(json: JsonElement, typeOfT: Type,
-                             context: JsonDeserializationContext): Size {
+    override fun deserialize(
+        json: JsonElement, typeOfT: Type,
+        context: JsonDeserializationContext
+    ): Size {
         val width = json.asJsonObject.get("width").asInt
         val height = json.asJsonObject.get("height").asInt
         return Size(width, height)

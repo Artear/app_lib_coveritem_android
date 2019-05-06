@@ -2,7 +2,7 @@ package com.artear.cover.coveritem.repository.model.block
 
 import com.google.gson.annotations.SerializedName
 
-enum class BlockType(val description: String){
+enum class BlockType(val description: String) {
     @SerializedName("article")
     ARTICLE("article"),
     @SerializedName("category")
