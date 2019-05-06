@@ -1,4 +1,4 @@
-package com.example.coveritem;
+package com.artear.cover.coveritem;
 
 import org.junit.Test;
 

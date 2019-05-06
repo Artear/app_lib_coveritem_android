@@ -1,4 +1,4 @@
-package com.example.coveritem;
+package com.artear.cover.coveritem;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;

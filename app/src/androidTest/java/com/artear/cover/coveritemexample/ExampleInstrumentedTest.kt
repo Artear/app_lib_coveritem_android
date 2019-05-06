@@ -1,4 +1,4 @@
-package com.artear.cover.coveritem
+package com.artear.cover.coveritemexample
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry

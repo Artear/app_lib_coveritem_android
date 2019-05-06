@@ -1,4 +1,4 @@
-package com.artear.cover.coveritem
+package com.artear.cover.coveritemexample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

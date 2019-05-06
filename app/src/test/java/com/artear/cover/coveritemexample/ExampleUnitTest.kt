@@ -1,4 +1,4 @@
-package com.artear.cover.coveritem
+package com.artear.cover.coveritemexample
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
