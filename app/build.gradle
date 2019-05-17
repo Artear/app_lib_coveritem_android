@@ -51,5 +51,6 @@ dependencies {
 
     //Support
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "androidx.recyclerview:recyclerview:$recyclerVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
 }

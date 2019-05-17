@@ -2,6 +2,7 @@ package com.artear.cover.coveritem.presentation.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.artear.cover.coveritem.presentation.contract.ItemAdapter
 import com.artear.cover.coveritem.presentation.model.ArtearItem
 
 
@@ -20,6 +21,10 @@ abstract class ContentAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
 
     override fun getItemViewType(position: Int): Int {
         return itemAdapterManager.getItemViewType(list, position)
+    }
+
+    fun getItemAdapter(position: Int) : ItemAdapter<*> {
+        return itemAdapterManager.getItemAdapter(list, position)
     }
 
     open fun clear() {
