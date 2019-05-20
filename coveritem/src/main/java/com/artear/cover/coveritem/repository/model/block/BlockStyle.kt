@@ -1,5 +1,6 @@
 package com.artear.cover.coveritem.repository.model.block
 
+import com.artear.cover.coveritem.presentation.model.ArtearStyle
 import com.google.gson.annotations.SerializedName
 
 
@@ -24,4 +25,4 @@ class BlockStyle(
     var titleNumberLines: Int? = 0,
     @SerializedName("description_number_of_lines")
     var descriptionNumberLines: Int? = 0
-)
+) : ArtearStyle()
