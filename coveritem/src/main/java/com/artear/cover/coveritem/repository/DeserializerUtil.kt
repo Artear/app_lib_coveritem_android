@@ -60,6 +60,7 @@ fun <T : Any> JsonElement.getModelList(
     context: JsonDeserializationContext,
     itemClass: KClass<T>,
     tolerance: Boolean = true,
+    toleranceError: Boolean = false,
     minCount: Int = 1
 ): ArrayList<T> {
 
@@ -73,6 +74,12 @@ fun <T : Any> JsonElement.getModelList(
             check(tolerance) {
                 "Decoding error was detected in ${itemClass.java.name}. " +
                         "Exception: ${e.message}"
+            }
+        } catch (error: NoClassDefFoundError) {
+            Timber.d(error, "No Class Def Found Error trying to Deserialize item")
+            check(toleranceError) {
+                "No Class Def Found Error was detected in ${itemClass.java.name}. " +
+                        "Error: ${error.message}"
             }
         }
     }
