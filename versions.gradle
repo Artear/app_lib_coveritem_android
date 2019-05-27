@@ -2,7 +2,7 @@ buildscript {
     ext {
 
         // -------- Library Version ---------
-        libraryVersion = '0.0.10'
+        libraryVersion = '0.0.11'
 
 
         // ------------ Kotlin --------------
@@ -11,7 +11,7 @@ buildscript {
 
 
         // ------------ Gradle --------------
-        gradle_build_version = '3.4.0'
+        gradle_build_version = '3.4.1'
 
 
         // ------------ Bintray -------------
