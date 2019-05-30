@@ -9,13 +9,17 @@ import kotlinx.android.synthetic.main.main_activity.*
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        const val SPAN_SIZE = 2
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
 
-        val gridLayoutManager = GridLayoutManager(this, 2)
+        val gridLayoutManager = GridLayoutManager(this, SPAN_SIZE)
         recyclerView.layoutManager = gridLayoutManager
-        val adapter = SpanContentAdapter()
+        val adapter = SpanContentAdapter(SPAN_SIZE)
         recyclerView.adapter = adapter
 
         gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
