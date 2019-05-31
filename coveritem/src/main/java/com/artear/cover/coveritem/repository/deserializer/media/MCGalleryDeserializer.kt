@@ -1,27 +1,25 @@
 package com.artear.cover.coveritem.repository.deserializer.media
 
-import com.artear.cover.coveritem.repository.getModelObject
+import com.artear.cover.coveritem.repository.getModelList
+import com.artear.cover.coveritem.repository.model.media.MediaContentGallery
 import com.artear.cover.coveritem.repository.model.media.MediaContentPicture
-import com.artear.cover.coveritem.repository.model.media.MediaContentYoutube
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import java.lang.reflect.Type
 
-class MCYoutubeDeserializer : JsonDeserializer<MediaContentYoutube> {
+class MCGalleryDeserializer : JsonDeserializer<MediaContentGallery> {
 
     override fun deserialize(
             json: JsonElement,
             typeOfT: Type,
             context: JsonDeserializationContext
-    ): MediaContentYoutube {
+    ): MediaContentGallery {
 
-        val id = json.asJsonObject.get("id").asString
-        val url = json.asJsonObject.get("url").asString
         val title = json.asJsonObject.get("title").asString
-        val image = json.getModelObject("image", context, MediaContentPicture::class.java)
+        val items = json.getModelList("items", context, MediaContentPicture::class)
 
-        return MediaContentYoutube(id, url, title, image)
+        return MediaContentGallery(title, items)
     }
 
 }

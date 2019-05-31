@@ -6,5 +6,9 @@ enum class MediaType {
     @SerializedName("picture")
     PICTURE,
     @SerializedName("youtube")
-    YOUTUBE
+    YOUTUBE,
+    @SerializedName("gallery")
+    GALLERY,
+    @SerializedName("video")
+    VIDEO,
 }

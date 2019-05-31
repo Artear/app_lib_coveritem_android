@@ -1,6 +1,9 @@
 package com.artear.cover.coveritem.repository.deserializer.media
 
+import com.artear.cover.coveritem.repository.getModelObject
 import com.artear.cover.coveritem.repository.model.media.MediaStyle
+import com.artear.cover.coveritem.repository.model.style.StyleBackground
+import com.artear.cover.coveritem.repository.model.style.StylePlaceholder
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
@@ -10,10 +13,10 @@ class MediaStyleDeserializer : JsonDeserializer<MediaStyle> {
 
     override fun deserialize(json: JsonElement, typeOfT: Type, context: JsonDeserializationContext): MediaStyle {
 
-        val backgroundColor = json.asJsonObject.get("background_color").asString
-        val usePlaceholder = json.asJsonObject.get("use_placeholder").asBoolean
+        val background = json.getModelObject("background", context, StyleBackground::class.java)
+        val placeholder = json.getModelObject("placeholder", context, StylePlaceholder::class.java)
 
-        return MediaStyle(backgroundColor, usePlaceholder)
+        return MediaStyle(background, placeholder)
     }
 
 }

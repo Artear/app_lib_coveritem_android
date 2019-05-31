@@ -18,6 +18,8 @@ class MediaDeserializer : JsonDeserializer<Media> {
         val data = when (type) {
             MediaType.PICTURE -> getDataFromJson<MediaContentPicture>(context, json)
             MediaType.YOUTUBE -> getDataFromJson<MediaContentYoutube>(context, json)
+            MediaType.GALLERY -> getDataFromJson<MediaContentGallery>(context, json)
+            MediaType.VIDEO -> getDataFromJson<MediaContentVideo>(context, json)
         }
 
         val style = getStyleFromJson<MediaStyle>(context, json)

@@ -1,3 +1,3 @@
 package com.artear.cover.coveritem.repository.model
 
-open class BlockContent
+open class BoxData
