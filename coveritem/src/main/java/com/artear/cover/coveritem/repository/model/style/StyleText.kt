@@ -1,15 +1,20 @@
 package com.artear.cover.coveritem.repository.model.style
 
-import com.google.gson.annotations.SerializedName
+import com.artear.cover.coveritem.repository.deserializer.style.StyleTextDeserializer
+import com.google.gson.annotations.JsonAdapter
 
-
+/**
+ * Structure for text visualization
+ *
+ * @property hidden [Boolean] Indicates if owner has to be shown
+ * @property numberOfLines [Int] Max number of lines shown
+ * @property color [StyleColorMode] Color configuration
+ * @property underline [StyleUnderline] Underline configuration
+ */
+@JsonAdapter(StyleTextDeserializer::class)
 class StyleText(
-        @SerializedName("hidden")
         var hidden: Boolean,
-        @SerializedName("number_of_lines")
-        var numberOfLines: Int,
-        @SerializedName("color")
-        var color: StyleColorMode,
-        @SerializedName("underline")
-        var underline: StyleUnderline
+        var numberOfLines: Int? = 0,
+        var color: StyleColorMode?,
+        var underline: StyleUnderline?
 )
