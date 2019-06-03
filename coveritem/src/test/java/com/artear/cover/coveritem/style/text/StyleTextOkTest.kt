@@ -58,13 +58,13 @@ class StyleTextOkTest {
     @Test
     fun underlineLightTest() {
         val styleText = gson.fromJson(responseBody.string(), StyleText::class.java)
-        Assert.assertEquals(styleText.underline!!.color.light, "#660066")
+        Assert.assertEquals(styleText.underline!!.color.light, "#CC00CC")
     }
 
     @Test
     fun underlineDarkTest() {
         val styleText = gson.fromJson(responseBody.string(), StyleText::class.java)
-        Assert.assertEquals(styleText.underline!!.color.light, "#CC00CC")
+        Assert.assertEquals(styleText.underline!!.color.light, "#660066")
     }
 
 
