@@ -8,8 +8,8 @@ package com.artear.cover.coveritem.repository.model.style
  * @param [Int] right Margin Right value
  */
 class StyleMarginRect(
-        var top: Int,
-        var bottom: Int,
-        var left: Int,
-        var right: Int
+    var top: Int?,
+    var bottom: Int?,
+    var left: Int?,
+    var right: Int?
 )

@@ -6,6 +6,6 @@ package com.artear.cover.coveritem.repository.model.style
  * @param rect [StyleMarginRect]
  */
 class StyleMargin(
-        var apply: Boolean,
-        var rect: StyleMarginRect
+    var apply: Boolean,
+    var rect: StyleMarginRect
 )

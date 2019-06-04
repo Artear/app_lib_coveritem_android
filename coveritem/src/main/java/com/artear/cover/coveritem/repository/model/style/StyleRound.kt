@@ -12,8 +12,8 @@ import com.google.gson.annotations.JsonAdapter
  */
 @JsonAdapter(StyleRoundDeserializer::class)
 class StyleRound(
-        var topLeft: Int,
-        var topRight: Int,
-        var bottomLeft: Int,
-        var bottomRight: Int
+    var topLeft: Int,
+    var topRight: Int,
+    var bottomLeft: Int,
+    var bottomRight: Int
 )
