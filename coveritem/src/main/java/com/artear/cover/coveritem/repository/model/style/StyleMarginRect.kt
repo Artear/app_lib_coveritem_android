@@ -1,7 +1,9 @@
 package com.artear.cover.coveritem.repository.model.style
 
 /**
- * Object to define margins of an object
+ * Object to define margins of an object.
+ * There is no necessary deserializer because any margin can be null.
+ *
  * @param [Int] top Margin Top value
  * @param [Int] bottom Margin Bottom value
  * @param [Int] left Margin Left value
