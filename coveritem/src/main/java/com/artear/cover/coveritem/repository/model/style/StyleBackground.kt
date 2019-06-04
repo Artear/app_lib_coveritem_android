@@ -6,6 +6,6 @@ import com.google.gson.annotations.SerializedName
 
 @JsonAdapter(StyleBackgroundDeserializer::class)
 class StyleBackground(
-        @SerializedName("color")
-        var color: StyleColorMode
+    @SerializedName("color")
+    var color: StyleColorMode
 )

@@ -10,6 +10,6 @@ import com.google.gson.annotations.JsonAdapter
  */
 @JsonAdapter(StyleColorModeDeserializer::class)
 class StyleColorMode(
-        var light: String,
-        var dark: String
+    var light: String,
+    var dark: String
 )

@@ -7,10 +7,10 @@ import com.google.gson.annotations.JsonAdapter
 
 @JsonAdapter(MDVideoDeserializer::class)
 data class MediaDataVideo(
-        val id: String,
-        val url: String,
-        val title: String,
-        val image: MediaDataPicture
+    val id: String,
+    val url: String,
+    val title: String,
+    val image: MediaDataPicture
 ) : MediaData()
 
 

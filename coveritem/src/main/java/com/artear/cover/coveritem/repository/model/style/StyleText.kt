@@ -13,8 +13,8 @@ import com.google.gson.annotations.JsonAdapter
  */
 @JsonAdapter(StyleTextDeserializer::class)
 class StyleText(
-        var hidden: Boolean,
-        var numberOfLines: Int? = 0,
-        var color: StyleColorMode?,
-        var underline: StyleUnderline?
+    var hidden: Boolean,
+    var numberOfLines: Int? = 0,
+    var color: StyleColorMode?,
+    var underline: StyleUnderline?
 )
