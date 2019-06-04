@@ -43,7 +43,7 @@ class StyleColorDarkRequiredTest {
     fun shouldFailDarkException() {
         thrown.expect(JsonSyntaxException::class.java)
         thrown.expectMessage("json.asJsonObject.get(\"dark\") must not be null")
-        val colorMode = gson.fromJson(responseBody.string(), StyleColorMode::class.java)
+        gson.fromJson(responseBody.string(), StyleColorMode::class.java)
 
     }
 

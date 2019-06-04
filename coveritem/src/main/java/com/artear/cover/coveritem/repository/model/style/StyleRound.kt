@@ -1,5 +1,8 @@
 package com.artear.cover.coveritem.repository.model.style
 
+import com.artear.cover.coveritem.repository.deserializer.style.StyleRoundDeserializer
+import com.google.gson.annotations.JsonAdapter
+
 /**
  * Structure for round corners
  * @property topLeft Top Left Corner Radius Value [Int]
@@ -7,6 +10,7 @@ package com.artear.cover.coveritem.repository.model.style
  * @property bottomLeft Bottom Left Corner Radius Value [Int]
  * @property bottomRight Bottom Right Corner Radius Value [Int]
  */
+@JsonAdapter(StyleRoundDeserializer::class)
 class StyleRound(
 
         var topLeft: Int,
