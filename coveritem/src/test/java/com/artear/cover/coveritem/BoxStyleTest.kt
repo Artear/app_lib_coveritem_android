@@ -3,6 +3,7 @@ package com.artear.cover.coveritem
 import com.artear.cover.coveritem.repository.model.box.BoxStyle
 import com.artear.cover.coveritem.repository.model.box.BoxStyleType
 import com.google.gson.Gson
+import com.google.gson.JsonSyntaxException
 import okhttp3.MediaType
 import okhttp3.ResponseBody
 import org.junit.Assert
@@ -46,7 +47,7 @@ class BoxStyleTest {
         Assert.assertEquals(0.5f, boxStyle.weight)
     }
 
-    @Test(expected = IllegalArgumentException::class)
+    @Test(expected = JsonSyntaxException::class)
     fun testBoxStyleWithoutWeight() {
         gson.fromJson(withoutWeightBoxStyleResponse.string(), BoxStyle::class.java)
     }
