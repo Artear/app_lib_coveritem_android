@@ -5,8 +5,8 @@ import com.google.gson.annotations.JsonAdapter
 
 /**
  * Structure for color configurations
- * @property light [String] Light Color Value
- * @property dark [String] Dark Color Value
+ * @param light [String] Light Color Value
+ * @param dark [String] Dark Color Value
  */
 @JsonAdapter(StyleColorModeDeserializer::class)
 class StyleColorMode(
