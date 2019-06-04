@@ -1,7 +1,6 @@
 package com.artear.cover.coveritem.repository.model.media
 
 import com.artear.cover.coveritem.repository.deserializer.media.MediaDeserializer
-import com.artear.cover.coveritem.repository.model.DataWrapper
 
 import com.google.gson.annotations.JsonAdapter
 
