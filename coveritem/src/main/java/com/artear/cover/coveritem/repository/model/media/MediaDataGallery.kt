@@ -7,7 +7,7 @@ import com.google.gson.annotations.JsonAdapter
 
 @JsonAdapter(MDGalleryDeserializer::class)
 data class MediaDataGallery(
-    val title: String,
+    val title: String?,
     val items: List<MediaDataPicture>
 ) : MediaData()
 

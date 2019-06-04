@@ -16,7 +16,7 @@ class MDGalleryDeserializer : JsonDeserializer<MediaDataGallery> {
             context: JsonDeserializationContext
     ): MediaDataGallery {
 
-        val title = json.asJsonObject.get("title").asString
+        val title = json.asJsonObject.get("title")?.asString
         val items = json.getModelList("items", context, MediaDataPicture::class)
 
         return MediaDataGallery(title, items)

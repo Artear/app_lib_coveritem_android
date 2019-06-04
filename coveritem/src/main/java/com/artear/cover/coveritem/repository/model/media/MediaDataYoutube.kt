@@ -7,6 +7,6 @@ import com.google.gson.annotations.JsonAdapter
 data class MediaDataYoutube(
     val id: String,
     val url: String,
-    val title: String,
+    val title: String?,
     val image: MediaDataPicture
 ) : MediaData()

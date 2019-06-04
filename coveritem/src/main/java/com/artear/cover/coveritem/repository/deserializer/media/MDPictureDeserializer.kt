@@ -17,13 +17,13 @@ class MDPictureDeserializer : JsonDeserializer<MediaDataPicture> {
             context: JsonDeserializationContext
     ): MediaDataPicture {
 
-        val url = json.asJsonObject.get("url").asString
-        val title = json.asJsonObject.get("title").asString
-        val description = json.asJsonObject.get("description").asString
-        val alt = json.asJsonObject.get("alt").asString
+        val jsonObject = json.asJsonObject
 
+        val url = jsonObject.get("url").asString
+        val title = jsonObject.get("title")?.asString
+        val description = jsonObject.get("description")?.asString
+        val alt = jsonObject.get("alt")?.asString
         val size = json.getModelObject("size", context, Size::class.java)
-
 
         return MediaDataPicture(url, title, description, alt, size)
     }

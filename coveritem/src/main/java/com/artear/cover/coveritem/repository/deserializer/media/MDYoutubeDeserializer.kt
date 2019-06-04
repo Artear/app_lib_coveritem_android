@@ -18,7 +18,7 @@ class MDYoutubeDeserializer : JsonDeserializer<MediaDataYoutube> {
 
         val id = json.asJsonObject.get("id").asString
         val url = json.asJsonObject.get("url").asString
-        val title = json.asJsonObject.get("title").asString
+        val title = json.asJsonObject.get("title")?.asString
         val image = json.getModelObject("image", context, MediaDataPicture::class.java)
 
         return MediaDataYoutube(id, url, title, image)

@@ -10,7 +10,7 @@ import com.google.gson.annotations.JsonAdapter
  * @param url can be empty when is created from article click
  */
 @JsonAdapter(LinkDeserializer::class)
-data class Link(val url: String, val internal: String) : Parcelable {
+data class Link(val url: String, val internal: String?) : Parcelable {
 
     @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
     constructor(parcel: Parcel) : this(parcel.readString(), parcel.readString())
