@@ -6,5 +6,5 @@ import com.google.gson.annotations.JsonAdapter
 
 @JsonAdapter(StyleUnderlineDeserializer::class)
 class StyleUnderline(
-        var color: StyleColorMode
+    var color: StyleColorMode
 )
