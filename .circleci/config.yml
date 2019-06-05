@@ -5,7 +5,7 @@
 defaults: &defaults
   working_directory: ~/code
   docker:
-    - image: circleci/android:api-28-alpha
+    - image: circleci/android:api-28
   environment:
     JVM_OPTS: -Xmx4g
 
@@ -60,6 +60,22 @@ jobs:
           path: coveritem/build/libs
           destination: libs
 
+  lint:
+    <<: *defaults
+    steps:
+      - restore_cache:
+          key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+      - restore_cache:
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "coveritem/build.gradle" }}
+      - run:
+          name: Run Tests
+          command: ./gradlew lint
+      - store_artifacts:
+          path: coveritem/build/reports
+          destination: reports
+      - store_test_results:
+          path: coveritem/build/test-results
+
   tests:
     <<: *defaults
     steps:
@@ -69,7 +85,7 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "coveritem/build.gradle" }}
       - run:
           name: Run Tests
-          command: ./gradlew lint test
+          command: ./gradlew test
       - store_artifacts:
           path: coveritem/build/reports
           destination: reports
@@ -128,6 +144,9 @@ workflows:
       - check_dependencies:
           requires:
             - download_dependencies
+      - lint:
+          requires:
+            - download_dependencies
       - tests:
           requires:
             - download_dependencies
@@ -135,6 +154,7 @@ workflows:
           requires:
             - release
             - tests
+            - lint
       - bintray:
           filters:
             branches:

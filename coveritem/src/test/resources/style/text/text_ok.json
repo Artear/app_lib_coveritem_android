@@ -1,0 +1,14 @@
+{
+  "hidden": false,
+  "number_of_lines": 3,
+  "color": {
+    "light": "#CC00CC",
+    "dark": "#660066"
+  },
+  "underline": {
+    "color": {
+      "light": "#660066",
+      "dark": "#CC00CC"
+    }
+  }
+}
