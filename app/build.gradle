@@ -19,7 +19,7 @@ android {
     def vCode = 0 + getVersionCode(branch)
 
     defaultConfig {
-        applicationId "com.artear.cover.coveritemexample"
+        applicationId "com.artear.stevedore.stevedoreitemseexample"
         minSdkVersion 17
         targetSdkVersion 28
         versionCode vCode
@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-    implementation project(':coveritem')
+    implementation project(':stevedoreitems')
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     //Test

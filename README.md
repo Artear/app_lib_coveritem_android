@@ -1,7 +1,7 @@
-# Cover Item Base
-Cover Item Library
+# Stevedore Items
+Stevedore items Library
 
-- Cover Item Base structure for CoverViews Library
+- Stevedore items structure for StevedoreViews Library
 
 
 Download
@@ -9,14 +9,14 @@ Download
 via Maven:
 ```xml
 <dependency>
-  <groupId>com.artear.cover</groupId>
-  <artifactId>coveritem</artifactId>
-  <version>0.0.11</version>
+  <groupId>com.artear.stevedore</groupId>
+  <artifactId>stevedoreitems</artifactId>
+  <version>0.1.0</version>
 </dependency>
 ```
 or Gradle:
 ```groovy
-implementation 'com.artear.cover:coveritem:0.0.11'
+implementation 'com.artear.stevedore:stevedoreitems:0.1.0'
 ```
 UI view Lib requires at minimum Java 7 or Android 4.1.
 
