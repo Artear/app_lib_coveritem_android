@@ -12,7 +12,7 @@ open class SpanContentAdapter(private val defaultSpanSize: Int) : ContentAdapter
             itemAdapter.onSpanSizeRequired(list[position])
         else {
             logW {
-                "CoverItem Library -- SpanContentAdapter - The item adapter ${itemAdapter.javaClass} is not " +
+                "StevedoreItems Library -- SpanContentAdapter - The item adapter ${itemAdapter.javaClass} is not " +
                         "implements SpanItemAdapter. The default value = $defaultSpanSize has been returned"
             }
             defaultSpanSize
