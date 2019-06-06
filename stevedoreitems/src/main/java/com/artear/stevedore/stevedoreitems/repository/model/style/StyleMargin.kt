@@ -10,6 +10,5 @@ import com.google.gson.annotations.JsonAdapter
  */
 @JsonAdapter(StyleMarginDeserializer::class)
 class StyleMargin(
-    var apply: Boolean,
     var rect: StyleMarginRect
 )
