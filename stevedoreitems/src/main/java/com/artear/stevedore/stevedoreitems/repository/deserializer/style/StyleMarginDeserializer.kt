@@ -11,11 +11,8 @@ import java.lang.reflect.Type
 class StyleMarginDeserializer : JsonDeserializer<StyleMargin> {
 
     override fun deserialize(json: JsonElement, typeOfT: Type?, context: JsonDeserializationContext): StyleMargin {
-
-        val apply = json.asJsonObject.get("apply").asBoolean
         val rect = json.getModelObject("rect", context, StyleMarginRect::class.java)
-
-        return StyleMargin(apply, rect)
+        return StyleMargin(rect)
     }
 
 }
