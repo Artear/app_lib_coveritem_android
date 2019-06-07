@@ -4,7 +4,7 @@ Stevedore items Library
 - Stevedore items structure for StevedoreViews Library
 
 
-Download 
+Version 
 --------
 
 [![Latest Version](https://api.bintray.com/packages/artearmobile/Android/Stevedore-Items/images/download.svg)](https://bintray.com/artearmobile/Android/Stevedore-Items/_latestVersion)
