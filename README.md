@@ -4,21 +4,10 @@ Stevedore items Library
 - Stevedore items structure for StevedoreViews Library
 
 
-Download
+Download 
 --------
-via Maven:
-```xml
-<dependency>
-  <groupId>com.artear.stevedore</groupId>
-  <artifactId>stevedoreitems</artifactId>
-  <version>0.2.4</version>
-</dependency>
-```
-or Gradle:
-```groovy
-implementation 'com.artear.stevedore:stevedoreitems:0.2.4'
-```
-UI view Lib requires at minimum Java 7 or Android 4.1.
+
+[![Latest Version](https://api.bintray.com/packages/artearmobile/Android/Stevedore-Items/images/download.svg)](https://bintray.com/artearmobile/Android/Stevedore-Items/_latestVersion)
 
 License
 =======
