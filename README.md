@@ -11,12 +11,12 @@ via Maven:
 <dependency>
   <groupId>com.artear.stevedore</groupId>
   <artifactId>stevedoreitems</artifactId>
-  <version>0.2.3</version>
+  <version>0.2.4</version>
 </dependency>
 ```
 or Gradle:
 ```groovy
-implementation 'com.artear.stevedore:stevedoreitems:0.2.3'
+implementation 'com.artear.stevedore:stevedoreitems:0.2.4'
 ```
 UI view Lib requires at minimum Java 7 or Android 4.1.
 
