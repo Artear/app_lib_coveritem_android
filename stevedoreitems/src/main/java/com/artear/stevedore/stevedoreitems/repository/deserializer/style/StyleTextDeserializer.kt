@@ -14,7 +14,7 @@ class StyleTextDeserializer : JsonDeserializer<StyleText> {
     override fun deserialize(json: JsonElement, typeOfT: Type, context: JsonDeserializationContext): StyleText {
 
         val hidden = json.asJsonObject.get("hidden").asBoolean
-        val numberOfLines = json.asJsonObject.get("number_of_lines")?.asInt
+        val numberOfLines = json.getSafeModelObject("number_of_lines", context, Int::class.java)
         val color = json.getSafeModelObject("color", context, StyleColorMode::class.java)
         val underline = json.getSafeModelObject("underline", context, StyleUnderline::class.java)
 

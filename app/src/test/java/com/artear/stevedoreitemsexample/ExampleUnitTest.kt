@@ -1,4 +1,4 @@
-package com.artear.stevedore.stevedoreitemsexample
+package com.artear.stevedoreitemsexample
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

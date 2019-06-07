@@ -20,7 +20,7 @@ plugins {
 
 ext {
     bintrayRepo = 'Android'
-    bintrayName = 'StevedoreItems'
+    bintrayName = 'Stevedore-Items'
 
     publishedGroupId = 'com.artear.stevedore'
     libraryName = 'Stevedore-Items'

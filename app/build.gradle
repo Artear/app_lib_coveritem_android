@@ -19,7 +19,7 @@ android {
     def vCode = 0 + getVersionCode(branch)
 
     defaultConfig {
-        applicationId "com.artear.stevedore.stevedoreitemseexample"
+        applicationId "com.artear.stevedoreitemseexample"
         minSdkVersion 17
         targetSdkVersion 28
         versionCode vCode

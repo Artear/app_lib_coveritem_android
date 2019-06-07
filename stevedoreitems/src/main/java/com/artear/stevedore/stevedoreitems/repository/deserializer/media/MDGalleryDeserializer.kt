@@ -1,6 +1,7 @@
 package com.artear.stevedore.stevedoreitems.repository.deserializer.media
 
 import com.artear.stevedore.stevedoreitems.repository.getModelList
+import com.artear.stevedore.stevedoreitems.repository.getSafeModelObject
 import com.artear.stevedore.stevedoreitems.repository.model.media.MediaDataGallery
 import com.artear.stevedore.stevedoreitems.repository.model.media.MediaDataPicture
 import com.google.gson.JsonDeserializationContext
@@ -11,12 +12,12 @@ import java.lang.reflect.Type
 class MDGalleryDeserializer : JsonDeserializer<MediaDataGallery> {
 
     override fun deserialize(
-            json: JsonElement,
-            typeOfT: Type,
-            context: JsonDeserializationContext
+        json: JsonElement,
+        typeOfT: Type,
+        context: JsonDeserializationContext
     ): MediaDataGallery {
 
-        val title = json.asJsonObject.get("title")?.asString
+        val title = json.getSafeModelObject("title", context, String::class.java)
         val items = json.getModelList("items", context, MediaDataPicture::class)
 
         return MediaDataGallery(title, items)

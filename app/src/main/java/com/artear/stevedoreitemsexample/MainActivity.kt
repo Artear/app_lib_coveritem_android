@@ -1,4 +1,4 @@
-package com.artear.stevedore.stevedoreitemsexample
+package com.artear.stevedoreitemsexample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
