@@ -8,8 +8,9 @@ import com.artear.stevedore.stevedoreitems.presentation.contract.ArtearViewHolde
 import com.artear.stevedore.stevedoreitems.presentation.contract.ItemAdapter
 
 import com.artear.stevedore.stevedoreitems.presentation.model.ArtearItem
+import com.artear.stevedore.stevedoreitems.presentation.model.ArtearItemDecoration
 import com.artear.stevedore.stevedoreitems.presentation.model.ArtearObject
-import com.artear.stevedore.stevedoreitems.presentation.model.ArtearSection
+
 
 
 class DefaultItemAdapter : ItemAdapter<ArtearObject<*>> {
@@ -26,9 +27,9 @@ class DefaultItemAdapter : ItemAdapter<ArtearObject<*>> {
     }
 
     override fun onBindViewHolderBase(
-        holder: ArtearViewHolder<ArtearObject<*>>,
-        model: ArtearObject<*>, artearSection: ArtearSection
+            holder: ArtearViewHolder<ArtearObject<*>>,
+            model: ArtearObject<*>, artearItemDecoration: ArtearItemDecoration
     ) {
-        holder.bind(model, artearSection)
+        holder.bind(model, artearItemDecoration)
     }
 }
