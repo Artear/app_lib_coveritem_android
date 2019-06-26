@@ -3,8 +3,8 @@ package com.artear.stevedore.stevedoreitems.presentation.contract
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.artear.stevedore.stevedoreitems.presentation.model.ArtearItem
+import com.artear.stevedore.stevedoreitems.presentation.model.ArtearItemDecoration
 import com.artear.stevedore.stevedoreitems.presentation.model.ArtearObject
-import com.artear.stevedore.stevedoreitems.presentation.model.ArtearSection
 import com.artear.stevedore.stevedoreitems.presentation.model.ArtearStyle
 
 
@@ -19,5 +19,5 @@ interface ItemAdapter<T : ArtearObject<out ArtearStyle>> {
         onBindViewHolderBase(holder as ArtearViewHolder<T>, artearItem.model as T, artearItem.section)
     }
 
-    fun onBindViewHolderBase(holder: ArtearViewHolder<T>, model: T, artearSection: ArtearSection)
+    fun onBindViewHolderBase(holder: ArtearViewHolder<T>, model: T, artearItemDecoration: ArtearItemDecoration)
 }

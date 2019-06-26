@@ -9,6 +9,25 @@ Version
 
 [![Latest Version](https://api.bintray.com/packages/artearmobile/Android/Stevedore-Items/images/download.svg)](https://bintray.com/artearmobile/Android/Stevedore-Items/_latestVersion)
 
+Download
+--------
+via Maven:
+```xml
+<dependency>
+  <groupId>com.artear.stevedore</groupId>
+  <artifactId>stevedoreitems</artifactId>
+  <version>0.2.6</version>
+</dependency>
+```
+or Gradle:
+```groovy
+implementation "com.artear.stevedore:stevedoreitems:0.2.6"
+```
+Stevedore views Lib requires at minimum Java 7 or Android 4.1.
+
+License
+=======
+
 License
 =======
 
