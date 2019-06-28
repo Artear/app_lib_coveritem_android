@@ -16,7 +16,7 @@ interface ItemAdapter<T : ArtearObject<out ArtearStyle>> {
 
     @Suppress("UNCHECKED_CAST")
     fun onBindViewHolder(holder: RecyclerView.ViewHolder, artearItem: ArtearItem) {
-        onBindViewHolderBase(holder as ArtearViewHolder<T>, artearItem.model as T, artearItem.section)
+        onBindViewHolderBase(holder as ArtearViewHolder<T>, artearItem.model as T, artearItem.artearItemDecoration)
     }
 
     fun onBindViewHolderBase(holder: ArtearViewHolder<T>, model: T, artearItemDecoration: ArtearItemDecoration)
