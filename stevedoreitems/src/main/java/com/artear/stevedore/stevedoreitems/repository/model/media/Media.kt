@@ -9,19 +9,19 @@ import com.google.gson.annotations.JsonAdapter
 data class Media(override val type: MediaType, override val data: MediaData, override val style: MediaStyle?) :
         DataWrapper<MediaType, MediaData, MediaStyle?>(type, data, style) {
 
-    fun getImage(media: Media): String? {
-        return when (media.type) {
-            PICTURE -> (media.data as MediaDataPicture).url
-            YOUTUBE -> (media.data as MediaDataYoutube).image.url
+    fun getImage(): String? {
+        return when (type) {
+            PICTURE -> (data as MediaDataPicture).url
+            YOUTUBE -> (data as MediaDataYoutube).image.url
             GALLERY -> {
-                val items = (media.data as MediaDataGallery).items
+                val items = (data as MediaDataGallery).items
                 when {
                     items.isNotEmpty() -> items[0].url
                     else -> null
                 }
 
             }
-            VIDEO -> (media.data as MediaDataVideo).image.url
+            VIDEO -> (data as MediaDataVideo).image.url
         }
     }
 
