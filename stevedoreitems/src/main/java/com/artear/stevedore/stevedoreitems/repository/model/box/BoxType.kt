@@ -15,6 +15,6 @@ enum class BoxType(val description: String) {
     PICTURE("picture"),
     @SerializedName("dfp")
     DFP("dfp"),
-    @SerializedName("rating")
-    RATING("rating");
+    @SerializedName("ranking")
+    RANKING("ranking");
 }
